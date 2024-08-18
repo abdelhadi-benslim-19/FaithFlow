@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   function fetchPrayerTimesByAddress(address) {
-    const apiUrl = `http://api.aladhan.com/v1/timingsByAddress?address=${encodeURIComponent(address)}&method=2`;
+    const apiUrl = `http://api.aladhan.com/v1/timingsByCity/:date`;
   
     fetch(apiUrl)
       .then(response => response.json())
