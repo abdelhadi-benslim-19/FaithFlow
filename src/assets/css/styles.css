@@ -69,3 +69,8 @@ body {
     position: relative;
     top: 20px; /* Adjust position if needed */
 }
+
+.logo-style {
+  text-decoration: none;
+  color: black;
+}
