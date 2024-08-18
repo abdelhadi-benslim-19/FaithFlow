@@ -11,18 +11,47 @@
   <!-- App Header will be loaded here -->
   <div id="app-header"></div>
 
-  <!-- Main Content -->
-  <main class="pt-5">
-    <div class="container mt-4">
-      <h2>Fitness</h2>
-      <p>Track your fitness activities and progress here.</p>
-      <!-- Fitness content goes here -->
-    </div>
-  </main>
+    <!-- Fitness Tabs Content -->
+    <div class="container mt-4 pt-5"> <!-- Added pt-5 to ensure space below header -->
+      <!-- Tab navigation -->
+      <div class="tab-container">
+          <ul class="nav nav-tabs" id="fitnessTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="workouts-tab" data-bs-toggle="tab" href="#workouts" role="tab" aria-controls="workouts" aria-selected="true">Workouts</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="nutrition-tab" data-bs-toggle="tab" href="#nutrition" role="tab" aria-controls="nutrition" aria-selected="false">Nutrition</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="progress-tab" data-bs-toggle="tab" href="#progress" role="tab" aria-controls="progress" aria-selected="false">Progress</a>
+              </li>
+              <!-- Add more tabs if needed -->
+          </ul>
+      </div>
+
+      <!-- Tab content -->
+      <div class="tab-content mt-3" id="fitnessTabContent">
+          <div class="tab-pane fade show active" id="workouts" role="tabpanel" aria-labelledby="workouts-tab">
+              <h3>Workouts</h3>
+              <p>Content for workouts goes here.</p>
+          </div>
+          <div class="tab-pane fade" id="nutrition" role="tabpanel" aria-labelledby="nutrition-tab">
+              <h3>Nutrition</h3>
+              <p>Content for nutrition goes here.</p>
+          </div>
+          <div class="tab-pane fade" id="progress" role="tabpanel" aria-labelledby="progress-tab">
+              <h3>Progress</h3>
+              <p>Content for progress tracking goes here.</p>
+          </div>
+          <!-- Add more tab contents if needed -->
+      </div>
+  </div>
 
   <!-- Bottom Navbar will be loaded here -->
   <div id="bottom-navbar"></div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../src/js/main.js"></script>
 </body>
 </html>

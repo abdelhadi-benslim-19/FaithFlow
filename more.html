@@ -1,28 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>More - FaithFlow</title>
-  <link href="../assets/css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css"> <!-- Your custom styles -->
 </head>
 <body>
+    <div id="app-header"></div>
 
-  <!-- App Header will be loaded here -->
-  <div id="app-header"></div>
+    <!-- More Page Content -->
+    <div class="container mt-4 pt-5"> <!-- Added pt-5 to ensure space below header -->
 
-  <!-- Main Content -->
-  <main class="pt-5">
-    <div class="container mt-4">
-      <h2>More</h2>
-      <p>Explore more features and settings.</p>
-      <!-- More page content goes here -->
+        <!-- Grid Layout for Buttons -->
+        <div class="row g-3 mt-3">
+            <!-- Settings Button -->
+            <div class="col-6">
+                <a href="settings.html" class="btn btn-primary w-100">Settings</a>
+            </div>
+
+            <!-- Login Button -->
+            <div class="col-6">
+                <a href="login.html" class="btn btn-success w-100">Login</a>
+            </div>
+
+            <!-- Register Button -->
+            <div class="col-6">
+                <a href="register.html" class="btn btn-warning w-100">Register</a>
+            </div>
+
+            <!-- Additional Button -->
+            <div class="col-6">
+                <a href="somepage.html" class="btn btn-info w-100">Additional Page</a>
+            </div>
+
+            <!-- Help Button -->
+            <div class="col-6">
+                <a href="help.html" class="btn btn-secondary w-100">Help</a>
+            </div>
+
+            <!-- About Us Button -->
+            <div class="col-6">
+                <a href="about.html" class="btn btn-danger w-100">About Us</a>
+            </div>
+
+            <!-- Profile Button -->
+            <div class="col-6">
+                <a href="profile.html" class="btn btn-dark w-100">Profile</a>
+            </div>
+
+            <!-- Contact Us Button -->
+            <div class="col-6">
+                <a href="contact.html" class="btn btn-light w-100">Contact Us</a>
+            </div>
+        </div>
     </div>
-  </main>
 
-  <!-- Bottom Navbar will be loaded here -->
-  <div id="bottom-navbar"></div>
+    <div id="bottom-navbar"></div>
 
-  <script src="../src/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/main.js"></script>
 </body>
 </html>

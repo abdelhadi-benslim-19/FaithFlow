@@ -11,18 +11,48 @@
   <!-- App Header will be loaded here -->
   <div id="app-header"></div>
 
-  <!-- Main Content -->
-  <main class="pt-5">
-    <div class="container mt-4">
-      <h2>Goals</h2>
-      <p>Set and track your personal goals.</p>
-      <!-- Goals content goes here -->
+   <!-- Goals Tabs Content -->
+   <div class="container mt-4 pt-5"> <!-- Added pt-5 to ensure space below header -->
+    <!-- Tab navigation -->
+    <div class="tab-container">
+        <ul class="nav nav-tabs" id="goalsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="personal-goals-tab" data-bs-toggle="tab" href="#personal-goals" role="tab" aria-controls="personal-goals" aria-selected="true">Personal Goals</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="professional-goals-tab" data-bs-toggle="tab" href="#professional-goals" role="tab" aria-controls="professional-goals" aria-selected="false">Professional Goals</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="progress-tab" data-bs-toggle="tab" href="#progress-goals" role="tab" aria-controls="progress-goals" aria-selected="false">Progress</a>
+            </li>
+            <!-- Add more tabs if needed -->
+        </ul>
     </div>
-  </main>
+
+    <!-- Tab content -->
+    <div class="tab-content mt-3" id="goalsTabContent">
+        <div class="tab-pane fade show active" id="personal-goals" role="tabpanel" aria-labelledby="personal-goals-tab">
+            <h3>Personal Goals</h3>
+            <p>Content for personal goals goes here.</p>
+        </div>
+        <div class="tab-pane fade" id="professional-goals" role="tabpanel" aria-labelledby="professional-goals-tab">
+            <h3>Professional Goals</h3>
+            <p>Content for professional goals goes here.</p>
+        </div>
+        <div class="tab-pane fade" id="progress-goals" role="tabpanel" aria-labelledby="progress-tab">
+            <h3>Progress</h3>
+            <p>Content for goal progress tracking goes here.</p>
+        </div>
+        <!-- Add more tab contents if needed -->
+    </div>
+</div>
+
 
   <!-- Bottom Navbar will be loaded here -->
   <div id="bottom-navbar"></div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../src/js/main.js"></script>
 </body>
 </html>
