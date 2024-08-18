@@ -1,0 +1,29 @@
+/* Styles for horizontal scrolling tabs */
+.nav-tabs {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    padding: 0; /* Remove default padding */
+    margin-bottom: 0; /* Remove default margin */
+}
+
+.nav-tabs .nav-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+}
+
+.nav-tabs .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Optional: Hide scrollbar in Webkit browsers */
+.nav-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+/* Optional: Style the scrollbar for Firefox */
+.nav-tabs {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
