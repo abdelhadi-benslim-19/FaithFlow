@@ -26,3 +26,27 @@ body {
 .tab-content {
     margin-top: 20px; /* Space between tabs and tab content */
 }
+
+/* Ensure the tab container scrolls horizontally */
+.tab-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap; /* Keep tabs in one line */
+    padding-bottom: 10px; /* Space below the tabs */
+}
+
+.nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    border: none; /* Remove default border */
+}
+
+.nav-tabs .nav-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+}
+
+.nav-link {
+    white-space: nowrap; /* Prevent text wrapping */
+}
