@@ -38,9 +38,10 @@
             color: #fff;
         }
 
-        .header-image img {
-            max-width: 60%;
-            height: auto;
+        .header-image .logo-text {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         h1 {
@@ -56,11 +57,11 @@
 
         .btn-custom {
             width: 100%;
-            max-width: 300px;
+            max-width: 200px; /* Reduced button size */
             margin: 0.5rem auto;
             border-radius: 25px;
-            padding: 10px 20px;
-            font-size: 1.1rem;
+            padding: 8px 15px; /* Reduced padding */
+            font-size: 1rem; /* Adjusted font size */
         }
 
         .btn-primary {
@@ -100,7 +101,8 @@
         .btn-container {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            align-items: center; /* Centered the buttons */
+            gap: 0.75rem; /* Adjusted space between buttons */
             padding-bottom: 2rem;
         }
 
@@ -116,7 +118,7 @@
 <body>
     <div class="welcome-container">
         <div class="header-image">
-            <img src="./assets/images/faithflow-logo.png" alt="FaithFlow logo">
+            <div class="logo-text">FaithFlow</div>
         </div>
         <h1>Welcome to FaithFlow</h1>
         <p>Your go-to app for spiritual growth and personal organization. Login or register to access your personalized experience.</p>
