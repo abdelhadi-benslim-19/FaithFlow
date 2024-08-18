@@ -63,3 +63,10 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
   }
   
+  function handleGeolocationError(error) {
+    console.error('Geolocation error:', error);
+    alert('Unable to retrieve your location. Please enter your address manually.');
+    // Show the manual address form if hidden
+    document.getElementById('address-form').style.display = 'block';
+  }
+  
