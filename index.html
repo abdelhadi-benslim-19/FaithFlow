@@ -5,14 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FaithFlow</title>
   <link rel="stylesheet" href="../src/assets/css/styles.css">
+  <style>
+    body {
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .welcome-container {
+        text-align: center;
+        padding: 2rem;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .btn-enter {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
+        border-radius: 50px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn-enter:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+</style>
 </head>
 
 <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
-  <div class="text-center">
-      <h1>Welcome to FaithFlow</h1>
-      <p>Your app for spiritual growth and personal development.</p>
-      <a href="./public/home.html" class="btn btn-primary">Enter the App</a>
-  </div>
+  <div class="welcome-container">
+    <h1>Welcome to FaithFlow</h1>
+    <p>Your app for spiritual growth and personal development.</p>
+    <a href="./home.html" class="btn btn-enter">Enter the App</a>
+</div>
 
  
   <script src="../src/js/main.js"></script>
