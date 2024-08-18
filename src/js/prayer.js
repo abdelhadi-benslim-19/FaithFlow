@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
         fetchPrayerTimesByAddress(address);
       }
     });
+  
+    // Handle location detection button click
+    document.getElementById('detect-location').addEventListener('click', function() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(fetchPrayerTimesByLocation, handleGeolocationError);
+      } else {
+        alert('Geolocation is not supported by this browser.');
+      }
+    });
   });
   
   function fetchPrayerTimesByAddress(address) {
@@ -20,6 +29,24 @@ document.addEventListener("DOMContentLoaded", function() {
         displayPrayerTimes(prayerTimes);
       })
       .catch(error => console.error('Error fetching prayer times:', error));
+  }
+  
+  function fetchPrayerTimesByLocation(position) {
+    const { latitude, longitude } = position.coords;
+    const apiUrl = `http://api.aladhan.com/v1/timings?latitude=${latitude}&longitude=${longitude}&method=2`;
+  
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const prayerTimes = data.data.timings;
+        displayPrayerTimes(prayerTimes);
+      })
+      .catch(error => console.error('Error fetching prayer times:', error));
+  }
+  
+  function handleGeolocationError(error) {
+    console.error('Geolocation error:', error);
+    alert('Unable to retrieve your location.');
   }
   
   function displayPrayerTimes(prayerTimes) {
